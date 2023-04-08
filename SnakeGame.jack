@@ -230,7 +230,11 @@ class SnakeGame {
         let xDist = Math.multiply((xApple-xSnake), (xApple-xSnake));
         let yDist = Math.multiply((yApple-ySnake), (yApple-ySnake));
         let bothDist = xDist + yDist; 
-        return Math.sqrt(bothDist);
+        if(bothDist>0)
+        {
+            return Math.sqrt(bothDist);
+        }
+        return 42;
     }
     
     method void apple()
