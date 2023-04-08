@@ -1,11 +1,11 @@
 class Snake {
 
     field int x, y; // местоположение змейки на экране
-    field int size; // длина змейки в пикселях
+    field int size; // ширина змейки в пикселях
     field int length; // текущая длина змеи
     field int maxLength; // максимальная длина змейки
-    field Array theSnake; // Змея всегда одной и той же длины, но черные - его текущая длина
-    field int currentDirection; // последняя нажатая пользователем кнопка
+    field Array theSnake; 
+    field int currentDirection; // Текущее направление змеи
     field boolean alive; //Жива ли змейка
     
 
@@ -51,8 +51,8 @@ class Snake {
         
         return;
     }
-        // когда змейка умирает, её отрисовать заново
-        method void initSnake (int Ax, int Ay) {
+    // когда змейка умирает, её отрисовать заново
+    method void initSnake (int Ax, int Ay) {
         var int i;
         let i = 0;
         let x = Ax;
@@ -61,9 +61,9 @@ class Snake {
         let length = 200;
         
         while(i < maxLength){  
-        let theSnake[i] = x - (i/2); // x-координата
-        let theSnake[i+1] = y; // y-координата
-        let i = i+2;
+            let theSnake[i] = x - (i/2); // x-координата
+            let theSnake[i+1] = y; // y-координата
+            let i = i+2;
         }
         
         return;
