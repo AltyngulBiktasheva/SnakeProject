@@ -1,10 +1,9 @@
 class Snake {
 
     field int x, y; // местоположение змейки на экране
-    field int size; // ширина змейки в пикселях
     field int length; // текущая длина змеи
     field int maxLength; // максимальная длина змейки
-    field Array theSnake; 
+    field Array theSnake; //Массив, в котором хранятся координаты змейки
     field int currentDirection; // Текущее направление змеи
     field boolean alive; //Жива ли змейка
     
@@ -12,7 +11,6 @@ class Snake {
     //Создаём новую змейку с заданными местоположением и размером
     constructor Snake new(int Ax, int Ay) {
         var int i;
-        var int startLength;
         let i = 0;
         let maxLength = 2000; 
         let x = Ax;
